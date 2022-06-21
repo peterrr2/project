@@ -1,18 +1,25 @@
-@mixin device($width:1000px){
-    @media screen and (max-width:$width) {
-        @content
+@mixin breakpoint($device){
+    @if($device == pc){
+        @media only screen and (max-width: 1200px){
+            @content;
+        }
     }
-};
-@mixin pad{
-    @media screen and (max-width:768px) {
-        @content
+    @else if($device == pad){
+        @media only screen and (max-width: 768px){
+            @content;
+        }
     }
-};
-@mixin mobile{
-    @media screen and (max-width:375px) {
-        @content
+    @else if($device == mobile){
+        @media only screen and (max-width: 375px){
+            @content;
+        }
     }
-};
+    @else if($device){
+        @media only screen and (max-width:$device){
+            @content;
+        }
+    }
+}
 @mixin size($width,$height:$width) {
     width: $width;
     height: $height;
@@ -59,9 +66,3 @@
     background-color: $bg;
     text-align: center;
 }
-@mixin icon($imageUrl, $iconWidth, $iconHeight: $iconWidth) {
-    width: $iconWidth;
-    height: $iconHeight;
-    background: url($imageUrl) center center;
-    background-size: $iconWidth $iconHeight;
-  }

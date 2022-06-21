@@ -7,7 +7,6 @@
 }
 
 //header
-
 header {
     position: fixed;
     top: 0;
@@ -56,7 +55,6 @@ header {
 }
 
 //footer
-
 #fullpage {
     footer {
         width: 100%;
@@ -99,10 +97,8 @@ header {
             }
             .footer-subnews {
                 position: relative;
-                display: flex;
+                @include flex_center;
                 flex: 1 0 0;
-                align-items: center;
-                justify-content: center;
                 padding: 0.5rem 2rem;
                 .subnews-input {
                     width: 100%;
@@ -122,55 +118,4 @@ header {
             }
         }
     }
-}
-
-//shopping-cart
-.shopping-cart {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: -400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @include size(350px,300px);
-    margin: auto;
-    padding: 1rem;
-    background-color: white;
-    box-sizing: border-box;
-    z-index: 999;
-    transition: 0.7s;
-    .shopping-cart-title {
-        .product-price {
-            padding: 0.5rem;
-            text-align: right;
-        }
-    }
-    .shopping-cart-content {
-        position: relative;
-        padding: 1rem 0;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-        margin-bottom: 1.5rem;
-        .expand-arrow {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
-        .product-info {
-            padding-right: 2rem;
-        }
-    }
-    .shopping-cart-order {
-        text-align: right;
-        .product-btn-add {
-            @include btn(black, (0.75rem, 0.5rem));
-        }
-    }
-}
-.shopping-cart-show {
-    right: 0;
 }
