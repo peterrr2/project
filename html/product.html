@@ -1,141 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product</title>
-    <link rel="stylesheet" href="../css/all.css">
-</head>
-<body>
-    <header>
-        <div class="header">
-            <nav>
-                <ul class="navbar">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">black tea</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">oolong tea</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">stories</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header-logo"></div>
-            <div class="header-link">
-                <a class="link-item link-question" id="question" href="#">
-                    <img
-                        src="../img/header/question-icon.png"
-                        alt="question"
-                    />
-                </a>
-                <a
-                    class="link-item link-shopping-bag"
-                    id="shopping-bag"
-                    href="#"
-                >
-                    <img
-                        src="../img/header/shopping-bag-icon.png"
-                        alt="shopping-bag"
-                    />
-                </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>product</title>
+        <link rel="stylesheet" href="../css/all.css" />
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <div class="header">
+                <nav>
+                    <ul class="navbar">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">black tea</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">oolong tea</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">stories</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-logo"></div>
+                <div class="header-link">
+                    <a class="link-item link-question" id="question" href="#">
+                        <img
+                            src="../img/header/question-icon.png"
+                            alt="question"
+                        />
+                    </a>
+                    <a
+                        class="link-item link-shopping-bag"
+                        id="shopping-bag"
+                        href="#"
+                    >
+                        <img
+                            src="../img/header/shopping-bag-icon.png"
+                            alt="shopping-bag"
+                        />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 左邊menu bar -->
+        <ul class="left_menu_bar" id="left_menu_bar">
+            <li class="active menu-item" data-menuanchor="OsmanthusOolong">
+                <a class="item-text" href="#OsmanthusOolong">Osmanthus Oolong</a>
+            </li>
+            <li class="menu-item" data-menuanchor="Oolong">
+                <a class="item-text" href="#Oolong">Oolong</a>
+            </li>
+            <li class="menu-item" data-menuanchor="HoneyOolong">
+                <a class="item-text" href="#HoneyOolong">Honey Oolong</a>
+            </li>
+            <li class="menu-item" data-menuanchor="RedJade">
+                <a class="item-text" href="#RedJade">Red Jade</a>
+            </li>
+            <li class="menu-item" data-menuanchor="LycheeBlackTea">
+                <a class="item-text" href="#LycheeBlackTea">Lychee Black Tea</a>
+            </li>
+        </ul>
+
+        <!-- shopping cart -->
+        <div class="shopping-cart" id="shopping-cart">
+            <div class="shopping-cart-title">
+                <h1 class="product-name">Osmanthus Oolong</h1>
+                <h1 class="product-price">€15,00</h1>
+            </div>
+            <div class="shopping-cart-content">
+                <button class="expand-arrow" id="expand-arrow">
+                    <img src="../img/product/up-arrow.png" alt="">
+                </button>
+                <p class="product-info">
+                    Ingredient / Osmanthus flower, Oolong Tea Loose Leaf Tea / ℮
+                    3g X 20 bags Best before / January 2024 From Taiwan
+                </p>
+            </div>
+            <div class="shopping-cart-order">
+                <button class="product-btn-add">ADD TO CART</button>
             </div>
         </div>
-    </header>
-    <div id="fullpage">
-        <main class="main-content">
-            <div class="section product-layout product-info-1">
-                <div class="wrap">
-                    <div class="pic">
-                        <img src="../img/product/info-1-pic.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <div class="text">
-                            <h1>Osmanthus Oolong</h1>
-                            <p>Taiwanese Oolong tea consists of Camellia tree leaves and experiences a partial oxidation process which gives it a distinct color and taste.</p>
+
+        <!-- main content -->
+        <div id="fullpage">
+            <main class="main-content">
+                <!-- page 1 -->
+                <div
+                    class="section product-layout product-info-1"
+                    data-anchor="OsmanthusOolong"
+                >
+                    <div class="wrap">
+                        <div class="pic">
+                            <img src="../img/product/info-1-pic.png" alt="" />
                         </div>
-                        <div class="product-pic">
-                            <img src="../img/product/info-1-product.png" alt="">
+                        <div class="item">
+                            <div class="text">
+                                <h1 class="title">Osmanthus Oolong</h1>
+                                <p class="content">
+                                    Taiwanese Oolong tea consists of Camellia
+                                    tree leaves and experiences a partial
+                                    oxidation process which gives it a distinct
+                                    color and taste.
+                                </p>
+                            </div>
+                            <div class="product-list">
+                                <div class="product-list-item">
+                                    <button class="list-btn-order">
+                                        teabag
+                                    </button>
+                                    <img
+                                        src="../img//product/oolong.png"
+                                        alt="Osmanthus Oolong"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="section product-layout product-info-2">
+                <!-- page 2 -->
+                <div
+                    class="section product-layout product-info-2"
+                    data-anchor="Oolong"
+                >
+                    <div class="wrap">
+                        <div class="pic">
+                            <img src="../img/product/info-1-pic.png" alt="" />
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <h1 class="title">Oolong</h1>
+                                <p class="content">
+                                    Taiwanese Oolong tea consists of Camellia
+                                    tree leaves and experiences a partial
+                                    oxidation process which gives it a distinct
+                                    color and taste.
+                                </p>
+                            </div>
+                            <div class="product-list">
+                                <div class="product-list-item">
+                                    <button class="list-btn-order">
+                                        teabag
+                                    </button>
+                                    <img
+                                        src="../img/product/oolong.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="product-list-item">
+                                    <button class="list-btn-order">
+                                        teabag
+                                    </button>
+                                    <img
+                                        src="../img/product/oolong.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- page 3 -->
+                <div
+                    class="section product-layout product-info-3"
+                    data-anchor="HoneyOolong"
+                >
+                    <div class="wrap">
+                        <div class="pic">
+                            <img src="../img/product/info-1-pic.png" alt="" />
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <h1 class="title">Honey Oolong</h1>
+                                <p class="content">
+                                    Taiwanese Oolong tea consists of Camellia
+                                    tree leaves and experiences a partial
+                                    oxidation process which gives it a distinct
+                                    color and taste.
+                                </p>
+                            </div>
+                            <div class="product-list">
+                                <div class="product-list-item">
+                                    <button class="list-btn-order">
+                                        teabag
+                                    </button>
+                                    <img
+                                        src="../img/product/honey oolong.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="product-list-item">
+                                    <button class="list-btn-order">
+                                        teabag
+                                    </button>
+                                    <img
+                                        src="../img/product/honey oolong.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- page 4 -->
+                <div
+                    class="section product-layout product-info-4"
+                    data-anchor="RedJade"
+                >
+                    <div class="wrap">
+                        <div class="pic">
+                            <img src="../img/product/info-1-pic.png" alt="" />
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <h1 class="title">Red Jade</h1>
+                                <p class="content">
+                                    Taiwanese Oolong tea consists of Camellia
+                                    tree leaves and experiences a partial
+                                    oxidation process which gives it a distinct
+                                    color and taste.
+                                </p>
+                            </div>
+                            <div class="product-list">
+                                <div class="product-list-item">
+                                    <button class="list-btn-order">
+                                        teabag
+                                    </button>
+                                    <img
+                                        src="../img/product/Red Jade.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="product-list-item">
+                                    <button class="list-btn-order">
+                                        teabag
+                                    </button>
+                                    <img
+                                        src="../img/product/Red Jade.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- page 5 -->
+                <div
+                    class="section product-layout product-info-5"
+                    data-anchor="LycheeBlackTea"
+                >
+                    <div class="wrap">
+                        <div class="pic">
+                            <img src="../img/product/info-1-pic.png" alt="" />
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <h1 class="title">Lychee Black Tea</h1>
+                                <p class="content">
+                                    Taiwanese Oolong tea consists of Camellia
+                                    tree leaves and experiences a partial
+                                    oxidation process which gives it a distinct
+                                    color and taste.
+                                </p>
+                            </div>
+                            <div class="product-list">
+                                <div class="product-list-item">
+                                    <button class="list-btn-order">
+                                        teabag
+                                    </button>
+                                    <img
+                                        src="../img/product/Lychee blacktea.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
 
-            </div>
-            <div class="section product-layout product-info-3">
-
-            </div> 
-            <div class="section product-layout product-info-4">
-
-            </div>
-            <div class="section product-layout product-info-5">
-
-            </div>
-        </main>
-        <footer class="section fp-auto-height footer" data-anchor="footer">
-            <div class="footer">
-                <!-- 回到頂部 -->
-                <a class="footer-toTop" href="#page1">
-                    <img
-                        class="arrow"
-                        src="../img/footer/footer-arrow.png"
-                        alt=""
-                    />
-                    <span class="">Top</span>
-                </a>
-                <ul class="footer-list">
-                    <li class="item">
-                        <a class="item-link" href="#">About</a>
-                    </li>
-                    <li class="item">
-                        <a class="item-link" href="#">Contact us</a>
-                    </li>
-                    <li class="item">
-                        <a class="item-link" href="#">FAQs</a>
-                    </li>
-                    <li class="item">
-                        <a class="item-link" href="#">Terms</a>
-                    </li>
-                    <li class="item">
-                        <a class="item-social" href="#">
-                            <img
-                                class="social-img"
-                                src="../img/footer/fb.svg"
-                                alt="facebook"
-                            />
-                        </a>
-                        <a class="item-social" href="#">
-                            <img
-                                class="social-img"
-                                src="../img/footer/ig.svg"
-                                alt="instagram"
-                            />
-                        </a>
-                    </li>
-                </ul>
-                <form class="footer-subnews">
-                    <input
-                        class="subnews-input"
-                        type="text"
-                        name=""
-                        id=""
-                        placeholder="Newsletter Sign Up"
-                    />
-                    <button type="submit" class="subnews-btn">
+            <!-- footer -->
+            <footer class="section fp-auto-height footer">
+                <div class="footer">
+                    <!-- 回到頂部 -->
+                    <a class="footer-toTop" href="#page1">
                         <img
-                            src="../img/footer/subnews-arrow.png"
-                            alt="arrow"
+                            class="arrow"
+                            src="../img/footer/footer-arrow.png"
+                            alt=""
                         />
-                    </button>
-                </form>
-            </div>
-        </footer>
-    </div>
-</body>
+                        <span class="">Top</span>
+                    </a>
+                    <ul class="footer-list">
+                        <li class="item">
+                            <a class="item-link" href="#">About</a>
+                        </li>
+                        <li class="item">
+                            <a class="item-link" href="#">Contact us</a>
+                        </li>
+                        <li class="item">
+                            <a class="item-link" href="#">FAQs</a>
+                        </li>
+                        <li class="item">
+                            <a class="item-link" href="#">Terms</a>
+                        </li>
+                        <li class="item">
+                            <a class="item-social" href="#">
+                                <img
+                                    class="social-img"
+                                    src="../img/footer/fb.svg"
+                                    alt="facebook"
+                                />
+                            </a>
+                            <a class="item-social" href="#">
+                                <img
+                                    class="social-img"
+                                    src="../img/footer/ig.svg"
+                                    alt="instagram"
+                                />
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="footer-subnews">
+                        <input
+                            class="subnews-input"
+                            type="text"
+                            name=""
+                            id=""
+                            placeholder="Newsletter Sign Up"
+                        />
+                        <button type="submit" class="subnews-btn">
+                            <img
+                                src="../img/footer/subnews-arrow.png"
+                                alt="arrow"
+                            />
+                        </button>
+                    </form>
+                </div>
+            </footer>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js"></script>
+            <script src="../js/product.js"></script>
+        </div>
+    </body>
 </html>

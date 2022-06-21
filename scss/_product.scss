@@ -1,38 +1,104 @@
-#fullpage{
-    .main-content{
-        .section {
-            @include size(100%, 100vh);
+@import "_index.scss";
+.left_menu_bar {
+    position: fixed;
+    top: 8rem;
+    left: 4rem;
+    z-index: 999;
+    .menu-item {
+        margin: 0.875rem 0;
+        padding: 5px;
+        .item-text {
+            color: black;
         }
-        .product-info-1{
-            background: url("../img/product/tea_icon_osmanthus\ oolong.png") scroll no-repeat 120% 225%/50% 80%;
-            background-color:#ECDFCE ;
-            .wrap{
+    }
+    .active {
+        background-color: black;
+        .item-text {
+            color: white;
+        }
+    }
+}
+#fullpage {
+    .main-content {
+        .product-info-1 {
+            background: url("../img/product/page-01-background.png") scroll
+                no-repeat 123% 225%/50% 80%;
+            background-color: #ecdfce;
+        }
+        .product-info-2 {
+            background: url("../img/product/page-02-background.png") scroll
+                no-repeat 115% 330%/40% 90%;
+            background-color: #d2ac7f;
+        }
+        .product-info-3 {
+            background: url("../img/product/page-03-background.png") scroll
+                no-repeat 140% 200%/50% 80%;
+            background-color: #bd7350;
+        }
+        .product-info-4 {
+            background: url("../img/product/page-04-background.png") scroll
+                no-repeat 115% 330%/40% 90%;
+            background-color: #cb3943;
+        }
+        .product-info-5 {
+            background: url("../img/product/page-05-background.png") scroll
+                no-repeat 115% 330%/40% 90%;
+            background-color: #ad4b4c;
+        }
+        .product-layout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .wrap {
                 display: flex;
-                align-items: center;
-                @include size(100%,100%);
                 max-width: 1200px;
-                margin: auto;
-                .pic{
-                    width: 400px;
-                    height: 500px;
-                    border-radius: 50% 50% 0 0;
-                    overflow: hidden;
-                    img{
+                margin-top: 100px;
+                margin: 3rem 12rem 0 12rem;
+                box-sizing: border-box;
+                .pic {
+                    width: 50%;
+                    img {
                         width: 100%;
-                        height: 100%;
                     }
                 }
-                .item{
+                .item {
                     display: flex;
                     flex-direction: column;
                     width: 50%;
-                    .text{
-                        width: 50%;
+                    margin-left: 3rem;
+                    .text {
+                        @include size(100%);
+                        padding-top: 2rem;
+                        .title {
+                            font-size: 30px;
+                            margin-bottom: 2rem;
+                        }
+                        .content {
+                            font-size: 20px;
+                        }
                     }
-                    .product-pic{
-                        width: 50%;
-                        img{
-                            width: 100%;
+                    .product-list {
+                        display: flex;
+                        @include size(100%);
+                        box-sizing: border-box;
+                        .product-list-item {
+                            position: relative;
+                            width: 50%;
+                            padding-left: 4rem;
+                            box-sizing: border-box;
+                            .list-btn-order {
+                                position: absolute;
+                                left: 2rem;
+                                top: -3rem;
+                                @include circle(80px, transparent);
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                                border: 3px solid black;
+                                cursor: pointer;
+                            }
+                            img {
+                                @include size(100%);
+                            }
                         }
                     }
                 }
