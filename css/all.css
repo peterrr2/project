@@ -1212,8 +1212,9 @@ header .header .header-link .link-item {
   cursor: pointer;
 }
 
-#fullpage .main-content .product-layout .wrap .item .product-list .product-list-item img {
+#fullpage .main-content .product-layout .wrap .item .product-list .product-list-item .product-pic {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 /*# sourceMappingURL=all.css.map */

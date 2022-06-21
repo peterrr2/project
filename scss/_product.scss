@@ -96,8 +96,9 @@
                                 border: 3px solid black;
                                 cursor: pointer;
                             }
-                            img {
+                            .product-pic {
                                 @include size(100%);
+                                cursor: pointer;
                             }
                         }
                     }

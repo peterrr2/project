@@ -20,6 +20,6 @@ $(".footer-toTop").on("click",function(){
 })
 
 // shoppingCart
-$("#shopping-bag").on("click",function(){
+$(".list-btn-order, .product-pic").on("click",function(){
     $("#shopping-cart").toggleClass("shopping-cart-show")
 })
