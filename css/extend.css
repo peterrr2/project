@@ -1,0 +1,11 @@
+.border-white {
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: white;
+}
+
+.text-white {
+  color: white;
+}
+/*# sourceMappingURL=extend.css.map */
