@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,aAAa,CAAA;EACT,YAAY,EAAE,KAAK;CACtB;;AACD,AAAA,WAAW,CAAA;EACP,KAAK,EAAE,KAAK;CACf",
-    "sources": [
-        "../scss/extent.scss"
-    ],
-    "names": [],
-    "file": "extent.css"
-}
