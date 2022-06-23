@@ -8,6 +8,9 @@
     @include breakpoint(pc){
         font-size: 1rem;
     }
+    @include breakpoint(lap){
+        display: none;
+    }
     .menu-item {
         margin: 0.625rem 0;
         padding: 5px;
@@ -37,18 +40,29 @@
     right: -400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     @include size(350px,300px);
     margin: auto;
     padding: 1rem;
     background-color: white;
     box-sizing: border-box;
-    z-index: 999;
+    z-index: 900;
     transition: 0.7s;
+    @include breakpoint(pc){
+        @include size(200px,200px);
+    }
     .shopping-cart-title {
+        .product-name{
+            @include breakpoint(pc){
+                font-size: 1rem;
+            }
+        }
         .product-price {
             padding: 0.5rem;
             text-align: right;
+            @include breakpoint(pc){
+                font-size: 1rem;
+            }
         }
     }
     .shopping-cart-content {
@@ -57,6 +71,9 @@
         border-top: 1px solid black;
         border-bottom: 1px solid black;
         margin-bottom: 1.5rem;
+        @include breakpoint(pc){
+            margin-bottom: 0.625rem;
+        }
         .expand-arrow {
             position: absolute;
             top: 0;
@@ -67,12 +84,21 @@
         }
         .product-info {
             padding-right: 2rem;
+            @include breakpoint(pc){
+                font-size: 0.625rem;
+                height: 60px;
+                overflow-y: scroll;
+            }
         }
     }
     .shopping-cart-order {
         text-align: right;
         .product-btn-add {
             @include btn(black, (0.75rem, 0.5rem));
+            @include breakpoint(pc){
+                padding: 0.5rem 0.25rem;
+                font-size: 0.625rem;
+            }
         }
     }
 }
@@ -115,9 +141,11 @@
             .wrap {
                 display: flex;
                 max-width: 1200px;
-                margin-top: 100px;
-                margin: 3rem 12rem 0 300px;
+                margin: 150px 12rem 50px 300px;
                 box-sizing: border-box;
+                @include breakpoint(pc){
+                    margin: 100px 12rem 0 250px;
+                }
                 .pic {
                     width: 50%;
                     height: 100%;

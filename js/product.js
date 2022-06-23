@@ -23,3 +23,8 @@ $(".footer-toTop").on("click",function(){
 $(".list-btn-order, .product-pic").on("click",function(){
     $("#shopping-cart").toggleClass("shopping-cart-show")
 })
+
+//ph-menu
+$(".ph-menu").on("click",function(){
+    $(".navbar").toggleClass("ph-navbar-show")
+})

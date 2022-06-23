@@ -4,14 +4,6 @@
     margin: 0;
     text-decoration: none;
 }
-%headerBorder{
-    content: "";
-    position: absolute;
-    right: -400%;
-    width: 400%;
-    height: 1px;
-    // background-color: white;
-}
 //header
 header {
     position: fixed;
@@ -19,10 +11,10 @@ header {
     left: 0;
     width: 100%;
     padding-top: 1.5rem;
-    font-size: 1.375rem;
+    font-size: 1.2rem;
     z-index: 999;
-    @include breakpoint(pc){
-        font-size: 1.2rem;
+    @include breakpoint(lap){
+        padding-top: 0;
     }
     .header {
         position: relative;
@@ -32,27 +24,48 @@ header {
                 position: relative;
                 display: flex;
                 padding: 0;
-                &::before{
-                    @extend %headerBorder;
+                @include breakpoint(lap){
+                    position: absolute;
                     top: 0;
-                }
-                &::after{
-                    @extend %headerBorder;
-                    bottom: 0;
-                }
+                    display: block;
+                    right: -100%;
+                    width: 100%;
+                    height: 100vh;
+                    padding-top: 72px;
+                    transition: 1s;
+                    z-index: 999;
+                    background-color: white;
+                };
                 .nav-item {
+                    @include breakpoint(lap){
+                        &:last-child{
+                            border-bottom: 1px solid;
+                        }
+                    }
                     .nav-link {
                         display: flex;
                         justify-content: center;
                         padding: 1.5rem 1.75rem;
+                        @include breakpoint(lap){
+                            justify-content: flex-start;
+                            padding: 1.5rem 1rem;
+                            &:hover{
+                                background-color: black;
+                                color: white;
+                            }
+                        }
                     }
                 }
+            }
+            .ph-navbar-show{
+                right: 0;
             }
         }
         .header-right-box{
             display: flex;
             align-items: center;
             flex: 1 0 0;
+            height: 70px;
             .header-logo {
                 position: absolute;
                 left: 50%;
@@ -66,9 +79,25 @@ header {
                 position: absolute;
                 display: flex;
                 right: 30px;
+                @include breakpoint(lap){
+                    left: 30px;
+                    right: 0;
+                }
                 .link-item {
                     margin-right: 2rem;
                     padding: 1rem 0;
+                }
+            }
+            .ph-menu{
+                display: none;
+                background: url("../img/header/ph-menu.png") no-repeat scroll center/100% 100%;
+                @include breakpoint(lap){
+                    position: absolute;
+                    display: block;
+                    right: 50px;
+                    width: 25px;
+                    height: 20px;
+                    z-index: 999;
                 }
             }
         }

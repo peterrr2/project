@@ -15,9 +15,18 @@
                 margin: auto;
                 padding:150px 100px 50px;
                 box-sizing: border-box;
+                @include breakpoint(lap){
+                    display: block;
+                    padding: 100px 2rem 0;
+                }
                 .pic{
                     width: 45%;
                     max-height: 720px;
+                    @include breakpoint(lap){
+                        width: 50%;
+                        height: 50%;
+                        margin: auto;
+                    }
                     img{
                         @include size(100%)
                     }
@@ -28,6 +37,9 @@
                     height: 100%;
                     padding-right: 2rem;
                     overflow-y: scroll;
+                    @include breakpoint(lap){
+                        width: 100%;
+                    }
                     &::-webkit-scrollbar{
                         width: 7px;
                     }

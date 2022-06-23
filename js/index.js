@@ -17,3 +17,8 @@ $(".footer-toTop").on("click",function(){
     fullpage_api.moveTo(1);
     $(".footer").removeClass("active fp-completely");
 })
+
+//ph-menu
+$(".ph-menu").on("click",function(){
+    $(".navbar").toggleClass("ph-navbar-show")
+})
