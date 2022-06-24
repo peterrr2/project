@@ -72,11 +72,20 @@ header {
             align-items: center;
             flex: 1 0 0;
             height: 70px;
+
+            @include breakpoint(pad){
+                height: 55px;
+            }
             .header-logo {
                 position: absolute;
                 left: 50%;
                 width: 40px;
                 height: 60px;
+
+                @include breakpoint(pad){
+                    width: 30px;
+                    height: auto;
+                }
                 img{
                     @include size(100%);
                 }
@@ -90,9 +99,21 @@ header {
                     left: 30px;
                     right: 0;
                 }
+                @include breakpoint(pad){
+                    left: 15px;
+                    right: 0;
+                }
                 .link-item {
                     margin-right: 2rem;
                     padding: 1rem 0;
+
+                    @include breakpoint(pad){
+                        margin-right: 1rem;
+                        width: 25px;
+                    }
+                    img{
+                        @include size(100%,auto);
+                    }
                 }
             }
             .ph-menu{
@@ -136,7 +157,9 @@ header {
                 border-right: 1px solid black;
                 color: black;
 
-                @include breakpoint(pad){
+                @include breakpoint(lap){
+                    justify-content: center;
+                    align-items: center;
                     padding: 0.5rem 0.875rem;
                     font-size: 1rem;
                 }
@@ -144,7 +167,7 @@ header {
                 .arrow {
                     width: 30px;
 
-                    @include breakpoint(pad){
+                    @include breakpoint(lap){
                         width: 20px;
                         padding-bottom: 0.375rem;
                     }
@@ -158,14 +181,14 @@ header {
                 border-right: 1px solid black;
                 box-sizing: border-box;
 
-                @include breakpoint(pad){
-                    flex: 1 0 0;
+                @include breakpoint(lap){
+                    flex: 8;
                     justify-content: flex-end;
                 }
                 .item {
                     display: flex;
 
-                    @include breakpoint(pad){
+                    @include breakpoint(lap){
                         display: none;
                     }
                     .item-link {
@@ -181,7 +204,7 @@ header {
                     }
                 }
                 .ph-item{
-                    @include breakpoint(pad){
+                    @include breakpoint(lap){
                         display: block;
                     }
                 }
@@ -193,9 +216,12 @@ header {
                 flex: 1 0 0;
                 padding: 0.5rem 2rem;
 
-                @include breakpoint(pad){
-                    flex: 0 0 20px;
-                    padding: 0.5rem 0.875rem;
+                @include breakpoint(lap){
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex: 0 0 16px;
+                    padding: 0.5rem 1rem;
                 }
                 .subnews-input {
                     width: 100%;
@@ -205,7 +231,7 @@ header {
                     border-right: none;
                     border-bottom: 1px solid black;
 
-                    @include breakpoint(pad){
+                    @include breakpoint(lap){
                         display: none;
                     }
                 }
@@ -216,7 +242,7 @@ header {
                     background-color: transparent;
                     cursor: pointer;
 
-                    @include breakpoint(pad){
+                    @include breakpoint(lap){
                         right: 0.875rem;
                     }
                 }

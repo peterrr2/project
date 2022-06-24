@@ -3,20 +3,29 @@
     .stories-intro {
         @include flex_center;
         background-color: #fffbf6;
+        &:first-child{
+            @include breakpoint(pad){
+                padding-top: 100px;
+            }
+        }
         &:last-child{
             padding-bottom: 100px;
+
+            @include breakpoint(pad){
+                padding-bottom: 0;
+            }
         }
         .wrap {
             display: flex;
             max-width: 1400px;
-            height: 100%;
             justify-content: space-between;
             margin: auto;
             padding: 150px 100px 50px;
             box-sizing: border-box;
             @include breakpoint(lap) {
                 display: block;
-                padding: 100px 2rem 0;
+                padding: 0 2rem;
+                margin-bottom: 2rem;
             }
             .pic {
                 width: 45%;
@@ -38,6 +47,7 @@
                 overflow-y: scroll;
                 @include breakpoint(lap) {
                     width: 100%;
+                    padding-top: 1rem;
                 }
                 &::-webkit-scrollbar {
                     width: 7px;
@@ -50,10 +60,24 @@
                     height: 1rem;
                 }
                 .title {
-                    line-height: 2.5;
+                    font-size: calc(1.5rem + 0.6vw);
+                    line-height: 2;
+
+                    @include breakpoint(pad){
+                        font-size: 1.5rem;
+                    }
                 }
                 .content {
+                    font-size: calc(1rem + 0.3vw);
                     line-height: 2;
+
+                    @include breakpoint(pad){
+                        padding: 1rem 0.5rem;
+                        border-top: 1px solid black;
+                        border-bottom: 1px solid black;
+                        font-size: 1rem;
+                        line-height: 1.5;
+                    }
                 }
             }
         }
