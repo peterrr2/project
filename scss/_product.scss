@@ -51,7 +51,7 @@
     transition: 0.7s;
 
     @include breakpoint(pc) {
-        @include size(200px, 200px);
+        @include size(200px);
     }
     @include breakpoint(pad) {
         display: none;
@@ -65,6 +65,7 @@
         .product-price {
             padding: 0.5rem;
             text-align: right;
+
             @include breakpoint(pc) {
                 font-size: 1rem;
             }

@@ -103,7 +103,7 @@
                     @include breakpoint(pad){
                         position: static;
                         display: block;
-                        padding: 0.875rem 1rem 2rem ;
+                        padding: 0.5rem 1rem 2rem ;
                     }
                     .title {
                         display: flex;
@@ -153,7 +153,8 @@
                             padding: 0.2rem 0.5rem;
                         }
                         @include breakpoint(pad){
-                            right: 1rem;
+                            right: 0.5rem;
+                            bottom: 0.5rem;
                             padding: 0.1rem 0.5rem;
                         }
                     }
@@ -295,11 +296,6 @@
                 @include size(100%);
                 box-sizing: border-box;
 
-                // 記得修改!!!!!!!!!!!!!!!!!!!!!!!
-                @include breakpoint(pad){
-                    width: 50%;
-                    overflow: hidden;
-                }
                 .title {
                     position: absolute;
                     top: 1rem;
