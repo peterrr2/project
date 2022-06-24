@@ -4,22 +4,49 @@
             background: url("../img/index/page-1-background.png") scroll
                 no-repeat center/100% 100%;
             color: white;
+
+            @include breakpoint(pad){
+                @include size(100%,50vh);
+            }
             .banner-text {
                 position: absolute;
                 top: 170px;
                 left: 100px;
+
+                @include breakpoint(pad){
+                    @include size(100%);
+                    top: 0;
+                    left: 30px;            
+                }
                 .text-title {
                     font-size: calc(1.375rem + 1.5vw);
 
+                    @include breakpoint(pad){
+                        position: absolute;
+                        top: 130px;
+                        width: 100px;
+                        font-size: 1.5rem;       
+                    } 
                 }
                 .text-content {
                     font-size: calc(1.275rem + 0.3vw);
+
+                    @include breakpoint(pad){
+                        position: absolute;
+                        bottom: 30px;
+                        font-size: 1rem;      
+                    } 
                 }
             }
             .banner-link {
                 position: absolute;
                 right: 80px;
                 bottom: 80px;
+
+                @include breakpoint(pad){
+                    right: 20px;
+                    bottom: 30px;   
+                } 
                 .link {
                     padding: 12px 28px;
                     background-color: transparent;
@@ -27,14 +54,22 @@
                     font-size: calc(1.275rem + 0.3vw);
                     color: white;
                     cursor: pointer;
+                    @include breakpoint(pad){
+                        padding: 0.275rem 0.4rem;
+                        font-size: 0.875rem;
+                    } 
                 }
             }
         }
         .product-describe {
             position: relative;
             background: url("../img/index/page-2-background.png") scroll
-                no-repeat center/100% 100%;
+                no-repeat 50% 25%/contain;
             background-color: #f4ede4;
+
+            @include breakpoint(pad){
+                @include size(100%,40vh);
+            }
             .product-describe-container {
                 position: absolute;
                 left: 0;
@@ -46,6 +81,10 @@
                 .arrow {
                     padding: 3rem;
                     cursor: pointer;
+
+                    @include breakpoint(pad){
+                        display: none;
+                    }
                 }
                 .left-arrow {
                     border-right: 1px solid black;
@@ -57,19 +96,38 @@
                     position: relative;
                     display: flex;
                     justify-content: space-around;
-                    width: 100%;
+                    width: 70%;
                     padding: 1rem 2rem 0;
                     box-sizing: border-box;
+
+                    @include breakpoint(pad){
+                        position: static;
+                        display: block;
+                        padding: 0.875rem 1rem 2rem ;
+                    }
                     .title {
                         display: flex;
                         justify-content: center;
                         width: 50%;
                         font-size: 38px;
+
+                        @include breakpoint(pad){
+                            width: 75%;
+                            font-size: 1.2rem;
+                            line-height: 2;
+                            justify-content: flex-start;
+                        }
                     }
                     .content {
                         width: 50%;
                         padding: 0 2rem;
                         font-size: 20px;
+
+                        @include breakpoint(pad){
+                            width: 100%;
+                            font-size: 0.625rem;
+                            padding: 0;
+                        }
                     }
                     .btn {
                         position: absolute;
@@ -79,12 +137,21 @@
                         background-color: transparent;
                         border: 1px solid black;
                         cursor: pointer;
+
+                        @include breakpoint(pad){
+                            right: 1rem;
+                            padding: 0.1rem 0.5rem;
+                        }
                     }
                 }
             }
         }
         .about {
             background-color: #fffbf6;
+
+            @include breakpoint(pad){
+                @include size(100%,50vh);
+            }
             .container {
                 @include size(100%);
                 position: relative;
@@ -146,6 +213,10 @@
         .stories {
             position: relative;
             background-color: #fffbf6;
+
+            @include breakpoint(pad){
+                @include size(100%,60vh);
+            }
             .wrap {
                 display: flex;
                 align-items: center;
