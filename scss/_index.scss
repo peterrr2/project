@@ -14,7 +14,7 @@
                 left: 100px;
 
                 @include breakpoint(pad){
-                    @include size(100%);
+                    @include size(50%,100%);
                     top: 0;
                     left: 30px;            
                 }
@@ -294,6 +294,12 @@
                 align-items: center;
                 @include size(100%);
                 box-sizing: border-box;
+
+                // 記得修改!!!!!!!!!!!!!!!!!!!!!!!
+                @include breakpoint(pad){
+                    width: 50%;
+                    overflow: hidden;
+                }
                 .title {
                     position: absolute;
                     top: 1rem;
