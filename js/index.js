@@ -2,6 +2,7 @@
 new fullpage('#fullpage', {
     scrollingSpeed:850,
     anchors: ['page1', 'page2', 'page3', 'page4', 'footer'],
+    responsiveWidth: 1025,
     afterLoad: function(origin, destination, direction, trigger){
         if(destination.index == 3){
             origin.item.classList.remove("active");

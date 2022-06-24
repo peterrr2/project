@@ -1,3 +1,10 @@
+.section {
+    @include size(100%, 100vh);
+
+    @include breakpoint(lap){
+        @include size(100%);
+    }
+}
 .nav-border{
     border-top: 1px solid;
     border-right: 1px solid;
@@ -35,5 +42,15 @@
 .ph-text-black{
     @include breakpoint(lap){
         color: black;
+    }
+}
+.ph-border-white{
+    @include breakpoint(lap){
+        border-color: white;
+    }
+}
+.ph-text-white{
+    @include breakpoint(lap){
+        color: white;
     }
 }

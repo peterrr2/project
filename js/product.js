@@ -3,6 +3,7 @@ new fullpage('#fullpage', {
     scrollingSpeed:850,
     anchors: ['OsmanthusOolong', 'Oolong', 'HoneyOolong', 'RedJade','LycheeBlackTea','LycheeBlackTea'],
     menu:"#left_menu_bar",
+    responsiveWidth: 1025,
     afterLoad: function(origin, destination, direction, trigger){
         if(destination.index == 3){
             origin.item.classList.remove("active");

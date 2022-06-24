@@ -13,9 +13,7 @@ header {
     padding-top: 1.5rem;
     font-size: 1.2rem;
     z-index: 999;
-    @include breakpoint(lap){
-        padding-top: 0;
-    }
+
     .header {
         position: relative;
         display: flex;
@@ -24,19 +22,21 @@ header {
                 position: relative;
                 display: flex;
                 padding: 0;
+
                 @include breakpoint(lap){
                     position: absolute;
-                    top: 0;
+                    top: -1.5rem;
                     display: block;
                     right: -100%;
                     width: 100%;
                     height: 100vh;
-                    padding-top: 72px;
+                    padding-top: 96px;
                     transition: 1s;
                     z-index: 999;
                     background-color: white;
                 };
                 .nav-item {
+
                     @include breakpoint(lap){
                         &:last-child{
                             border-bottom: 1px solid;
@@ -46,6 +46,7 @@ header {
                         display: flex;
                         justify-content: center;
                         padding: 1.5rem 1.75rem;
+
                         @include breakpoint(lap){
                             justify-content: flex-start;
                             padding: 1.5rem 1rem;
@@ -79,6 +80,7 @@ header {
                 position: absolute;
                 display: flex;
                 right: 30px;
+
                 @include breakpoint(lap){
                     left: 30px;
                     right: 0;
@@ -91,6 +93,7 @@ header {
             .ph-menu{
                 display: none;
                 background: url("../img/header/ph-menu.png") no-repeat scroll center/100% 100%;
+
                 @include breakpoint(lap){
                     position: absolute;
                     display: block;

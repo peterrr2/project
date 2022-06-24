@@ -1,61 +1,59 @@
 @import "_index.scss";
-#fullpage{
-    .main-content{
-        .section {
-            @include size(100%, 100vh);
+.main-content {
+    .stories-intro {
+        @include flex_center;
+        background-color: #fffbf6;
+        &:last-child{
+            padding-bottom: 100px;
         }
-        .stories-intro{
-            @include flex_center;
-            background-color: #FFFBF6;
-            .wrap{
-                display: flex;
-                max-width: 1400px;
+        .wrap {
+            display: flex;
+            max-width: 1400px;
+            height: 100%;
+            justify-content: space-between;
+            margin: auto;
+            padding: 150px 100px 50px;
+            box-sizing: border-box;
+            @include breakpoint(lap) {
+                display: block;
+                padding: 100px 2rem 0;
+            }
+            .pic {
+                width: 45%;
+                max-height: 720px;
+                @include breakpoint(lap) {
+                    width: 50%;
+                    height: 50%;
+                    margin: auto;
+                }
+                img {
+                    @include size(100%);
+                }
+            }
+            .text {
+                width: 45%;
+                max-height: 720px;
                 height: 100%;
-                justify-content: space-between;
-                margin: auto;
-                padding:150px 100px 50px;
-                box-sizing: border-box;
-                @include breakpoint(lap){
-                    display: block;
-                    padding: 100px 2rem 0;
+                padding-right: 2rem;
+                overflow-y: scroll;
+                @include breakpoint(lap) {
+                    width: 100%;
                 }
-                .pic{
-                    width: 45%;
-                    max-height: 720px;
-                    @include breakpoint(lap){
-                        width: 50%;
-                        height: 50%;
-                        margin: auto;
-                    }
-                    img{
-                        @include size(100%)
-                    }
+                &::-webkit-scrollbar {
+                    width: 7px;
                 }
-                .text{
-                    width: 45%;
-                    max-height: 720px;
-                    height: 100%;
-                    padding-right: 2rem;
-                    overflow-y: scroll;
-                    @include breakpoint(lap){
-                        width: 100%;
-                    }
-                    &::-webkit-scrollbar{
-                        width: 7px;
-                    }
-                    &::-webkit-scrollbar-thumb{
-                        background-color: #8C8C8C;
-                        border-radius: 5px;
-                    }
-                    &::-webkit-scrollbar-button{
-                        height: 1rem;
-                    }
-                    .title{
-                        line-height: 2.5;
-                    }
-                    .content{
-                        line-height: 2;
-                    }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #8c8c8c;
+                    border-radius: 5px;
+                }
+                &::-webkit-scrollbar-button {
+                    height: 1rem;
+                }
+                .title {
+                    line-height: 2.5;
+                }
+                .content {
+                    line-height: 2;
                 }
             }
         }

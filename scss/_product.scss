@@ -4,18 +4,19 @@
     top: 8rem;
     left: 4rem;
     z-index: 999;
-    font-size: 1.375rem;
-    @include breakpoint(pc){
+    font-size: 1.25rem;
+
+    @include breakpoint(pc) {
         font-size: 1rem;
     }
-    @include breakpoint(lap){
+    @include breakpoint(lap) {
         display: none;
     }
     .menu-item {
         margin: 0.625rem 0;
         padding: 5px;
         cursor: pointer;
-        &:hover .item-text{
+        &:hover .item-text {
             color: white;
             background-color: black;
         }
@@ -41,26 +42,27 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    @include size(350px,300px);
+    @include size(350px, 300px);
     margin: auto;
     padding: 1rem;
     background-color: white;
     box-sizing: border-box;
     z-index: 900;
     transition: 0.7s;
-    @include breakpoint(pc){
-        @include size(200px,200px);
+
+    @include breakpoint(pc) {
+        @include size(200px, 200px);
     }
     .shopping-cart-title {
-        .product-name{
-            @include breakpoint(pc){
+        .product-name {
+            @include breakpoint(pc) {
                 font-size: 1rem;
             }
         }
         .product-price {
             padding: 0.5rem;
             text-align: right;
-            @include breakpoint(pc){
+            @include breakpoint(pc) {
                 font-size: 1rem;
             }
         }
@@ -71,7 +73,8 @@
         border-top: 1px solid black;
         border-bottom: 1px solid black;
         margin-bottom: 1.5rem;
-        @include breakpoint(pc){
+
+        @include breakpoint(pc) {
             margin-bottom: 0.625rem;
         }
         .expand-arrow {
@@ -84,7 +87,8 @@
         }
         .product-info {
             padding-right: 2rem;
-            @include breakpoint(pc){
+
+            @include breakpoint(pc) {
                 font-size: 0.625rem;
                 height: 60px;
                 overflow-y: scroll;
@@ -95,7 +99,8 @@
         text-align: right;
         .product-btn-add {
             @include btn(black, (0.75rem, 0.5rem));
-            @include breakpoint(pc){
+
+            @include breakpoint(pc) {
                 padding: 0.5rem 0.25rem;
                 font-size: 0.625rem;
             }
@@ -108,13 +113,11 @@
 //主要內容
 #fullpage {
     .main-content {
-        .section {
-            @include size(100%, 100vh);
-        }
         .product-info-1 {
             background: url("../img/product/page-01-background.png") scroll
                 no-repeat 123% 225%/50% 80%;
             background-color: #ecdfce;
+
         }
         .product-info-2 {
             background: url("../img/product/page-02-background.png") scroll
@@ -136,34 +139,68 @@
                 no-repeat 115% 330%/40% 90%;
             background-color: #ad4b4c;
         }
+        .product-info-1,.product-info-2,.product-info-3,.product-info-4,.product-info-5{
+            @include breakpoint(lap) {
+                background-image: none;
+            }
+        }
         .product-layout {
             @include flex_center;
+
+            @include breakpoint(lap) {
+                display: block;
+            }
             .wrap {
                 display: flex;
-                max-width: 1200px;
-                margin: 150px 12rem 50px 300px;
+                max-width: 1000px;
+                margin: 150px 12rem 75px 300px;
                 box-sizing: border-box;
-                @include breakpoint(pc){
+
+                @include breakpoint(pc) {
                     margin: 100px 12rem 0 250px;
                 }
+                @include breakpoint(lap) {
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                }
                 .pic {
-                    width: 50%;
-                    height: 100%;
+                    @include size(100%);
+
+                    @include breakpoint(lap){
+                        @include size(100%,50%);
+                    }
                     img {
-                        width: 100%;
-                        height: 100%;
+                        @include size(100%);
+                        border-radius: 50% 50% 0 0;
+
+                        @include breakpoint(lap){
+                            border-radius: 0;
+                        }
                     }
                 }
                 .item {
                     display: flex;
                     flex-direction: column;
-                    width: 50%;
+                    @include size(100%);
                     margin-left: 3rem;
+
+                    @include breakpoint(lap) {
+                        @include size(100%,50vh);
+                        margin-left: 0;
+                        padding: 3rem;
+                    }
                     .text {
-                        @include size(100%);
+                        @include size(100%,50%);
                         margin-bottom: 3rem;
-                        @include breakpoint(pc){
+
+                        //breakpoint
+                        @include breakpoint(pc) {
                             margin-bottom: 1rem;
+                        }
+                        @include breakpoint(lap) {
+                            margin: 0 auto 2rem;
+                            @include size(50%);
                         }
                         .title {
                             font-size: calc(1.375rem + 0.9vw);
@@ -185,11 +222,31 @@
                         display: flex;
                         @include size(100%);
                         box-sizing: border-box;
+
+                        @include breakpoint(lap) {
+                            @include size(100%,50%);
+                            padding: 0 3rem;
+                            @include flex_center;
+                        }
                         .product-list-item {
                             position: relative;
                             width: 50%;
                             padding-left: 3rem;
                             box-sizing: border-box;
+
+                            @include breakpoint(lap) {
+                                display: flex;
+                                @include flex_center;
+                                padding-left: 0;
+                            }
+                            .product-pic {
+                                @include size(100%, auto);
+                                cursor: pointer;
+
+                                @include breakpoint(lap){
+                                    @include size(50%, auto)
+                                }
+                            }
                             .list-btn-order {
                                 position: absolute;
                                 left: 1rem;
@@ -201,18 +258,51 @@
                                 font-weight: 500;
                                 border: 1.5px solid black;
                                 cursor: pointer;
+
                                 @include breakpoint(pc) {
                                     left: 1.5rem;
                                     top: -1.5rem;
                                     @include circle(50px, transparent);
                                     font-size: 0.5rem;
                                 }
-                            }
-                            .product-pic {
-                                @include size(100%,100%);
-                                cursor: pointer;
+                                @include breakpoint(lap){
+                                    left: 0;
+                                    top: 0;
+                                    font-size: 1rem;
+                                    @include size(80px);
+                                }
                             }
                         }
+                    }
+                }
+                .ph-background-1{
+                    @include breakpoint(lap){
+                        background: url("../img/product/page-01-background.png")
+                        scroll no-repeat 110% 200%/50%;
+                    }
+                }
+                .ph-background-2{
+                    @include breakpoint(lap){
+                        background: url("../img/product/page-02-background.png")
+                        scroll no-repeat 120% 80%/60%;
+                    }
+                }
+                .ph-background-3{
+                    @include breakpoint(lap){
+                        background: url("../img/product/page-03-background.png")
+                        scroll no-repeat 120% 80%/60%;
+                    }
+                }
+                .ph-background-4{
+                    @include breakpoint(lap){
+                        background: url("../img/product/page-04-background.png")
+                        scroll no-repeat 120% 80%/60%;
+                    }
+                }
+                .ph-background-5{
+                    @include breakpoint(lap){
+                        background: url("../img/product/page-05-background.png")
+                        scroll no-repeat 120% 80%/60%;
                     }
                 }
             }
