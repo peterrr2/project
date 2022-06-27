@@ -268,6 +268,10 @@ header .header .header-right-box .ph-menu {
   }
 }
 
+header .header .header-right-box .ph-menu.active {
+  background: url("../img/header/cancel.png") no-repeat scroll center/100% 100%;
+}
+
 #fullpage footer {
   width: 100%;
   font-size: 20px;
@@ -548,14 +552,40 @@ header .header .header-right-box .ph-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  height: 130px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  overflow: hidden;
 }
 
 #fullpage .main-content .product-describe .product-describe-container .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  width: 120px;
   padding: 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 1200px) {
+  #fullpage .main-content .product-describe .product-describe-container .arrow {
+    width: 80px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -565,35 +595,45 @@ header .header .header-right-box .ph-menu {
 }
 
 #fullpage .main-content .product-describe .product-describe-container .left-arrow {
+  left: 0;
   border-right: 1px solid black;
 }
 
 #fullpage .main-content .product-describe .product-describe-container .right-arrow {
+  right: 0;
   border-left: 1px solid black;
 }
 
-#fullpage .main-content .product-describe .product-describe-container .text {
+#fullpage .main-content .product-describe .product-describe-container .carousel_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 400%;
+  height: 100%;
+  left: 0;
+}
+
+#fullpage .main-content .product-describe .product-describe-container .carousel_container .text {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-  padding: 1rem 2rem 0;
+  width: 100vw;
+  padding: 1rem 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .product-describe .product-describe-container .text {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text {
     position: static;
     display: block;
     padding: 0.5rem 1rem 2rem;
   }
 }
 
-#fullpage .main-content .product-describe .product-describe-container .text .title {
+#fullpage .main-content .product-describe .product-describe-container .carousel_container .text .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,18 +642,18 @@ header .header .header-right-box .ph-menu {
           justify-content: center;
   width: 40%;
   font-size: 38px;
-  padding: 0 6rem;
+  padding: 0 4rem;
 }
 
 @media only screen and (max-width: 1200px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .title {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .title {
     text-align: center;
     font-size: calc(1.5rem + 0.6vw);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .title {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .title {
     width: 80%;
     font-size: calc(1.3rem + 0.3vw);
     line-height: 2;
@@ -623,30 +663,30 @@ header .header .header-right-box .ph-menu {
   }
 }
 
-#fullpage .main-content .product-describe .product-describe-container .text .content {
+#fullpage .main-content .product-describe .product-describe-container .carousel_container .text .content {
   width: 60%;
-  padding: 0 4rem 0 0;
+  padding: 0 4rem 0 2rem;
   font-size: 20px;
 }
 
 @media only screen and (max-width: 1200px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .content {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .content {
     padding: 0 2rem 0 0;
     font-size: 1rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .content {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .content {
     width: 100%;
     font-size: 0.625rem;
     padding: 0;
   }
 }
 
-#fullpage .main-content .product-describe .product-describe-container .text .btn {
+#fullpage .main-content .product-describe .product-describe-container .carousel_container .text .btn {
   position: absolute;
-  right: 1rem;
+  right: 145px;
   bottom: 1rem;
   padding: 0.375rem 1rem;
   background-color: transparent;
@@ -656,32 +696,32 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 1200px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .btn {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .btn {
     font-size: 0.875rem;
     padding: 0.2rem 0.5rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .btn {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .btn {
     right: 0.5rem;
     bottom: 0.5rem;
     padding: 0.1rem 0.5rem;
   }
 }
 
-#fullpage .main-content .about {
+#fullpage .about {
   background-color: #fffbf6;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about {
+  #fullpage .about {
     width: 100%;
     height: 50vh;
   }
 }
 
-#fullpage .main-content .about .container {
+#fullpage .about .container {
   width: 100%;
   height: 100%;
   position: relative;
@@ -694,12 +734,12 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container {
+  #fullpage .about .container {
     display: block;
   }
 }
 
-#fullpage .main-content .about .container::before {
+#fullpage .about .container::before {
   content: "";
   position: absolute;
   left: 0;
@@ -710,30 +750,30 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container::before {
+  #fullpage .about .container::before {
     bottom: 40px;
   }
 }
 
-#fullpage .main-content .about .container .pic {
+#fullpage .about .container .pic {
   width: 50%;
   height: 100%;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .pic {
+  #fullpage .about .container .pic {
     width: 100%;
     height: 50%;
   }
 }
 
-#fullpage .main-content .about .container .pic .pic-img {
+#fullpage .about .container .pic .pic-img {
   width: 100%;
   height: 100%;
   vertical-align: top;
 }
 
-#fullpage .main-content .about .container .text {
+#fullpage .about .container .text {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -752,7 +792,7 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text {
+  #fullpage .about .container .text {
     width: 100%;
     height: 20%;
     position: static;
@@ -763,42 +803,42 @@ header .header .header-right-box .ph-menu {
   }
 }
 
-#fullpage .main-content .about .container .text .title {
+#fullpage .about .container .text .title {
   font-size: 54px;
   line-height: 2;
 }
 
 @media only screen and (max-width: 1200px) {
-  #fullpage .main-content .about .container .text .title {
+  #fullpage .about .container .text .title {
     font-size: calc(1.5rem + 1.2vw);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text .title {
+  #fullpage .about .container .text .title {
     font-size: calc(1.5rem + 0.9vw);
   }
 }
 
-#fullpage .main-content .about .container .text .content {
+#fullpage .about .container .text .content {
   font-size: 32px;
   line-height: 1.5;
 }
 
 @media only screen and (max-width: 1200px) {
-  #fullpage .main-content .about .container .text .content {
+  #fullpage .about .container .text .content {
     font-size: calc(1.2rem + 0.6vw);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text .content {
+  #fullpage .about .container .text .content {
     max-width: 200px;
     font-size: 1.2rem;
   }
 }
 
-#fullpage .main-content .about .container .text .link-group {
+#fullpage .about .container .text .link-group {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -813,7 +853,7 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text .link-group {
+  #fullpage .about .container .text .link-group {
     width: 50%;
     height: 40px;
     -webkit-box-align: center;
@@ -826,7 +866,7 @@ header .header .header-right-box .ph-menu {
   }
 }
 
-#fullpage .main-content .about .container .text .link-group .link-text {
+#fullpage .about .container .text .link-group .link-text {
   margin-right: 80px;
   padding: 1rem 2rem;
   font-size: 32px;
@@ -834,46 +874,46 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text .link-group .link-text {
+  #fullpage .about .container .text .link-group .link-text {
     margin-right: 1rem;
     padding: 0;
     font-size: 1.2rem;
   }
 }
 
-#fullpage .main-content .about .container .text .link-group .link-btn {
+#fullpage .about .container .text .link-group .link-btn {
   background-color: transparent;
   border: none;
   padding: 1rem 2rem;
 }
 
-#fullpage .main-content .about .container .text .link-group .link-btn img {
+#fullpage .about .container .text .link-group .link-btn img {
   width: 100%;
   height: auto;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text .link-group .link-btn {
+  #fullpage .about .container .text .link-group .link-btn {
     width: 25px;
     height: auto;
     padding: 0;
   }
 }
 
-#fullpage .main-content .stories {
+#fullpage .stories {
   position: relative;
   background-color: #fffbf6;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories {
+  #fullpage .stories {
     width: 200%;
     height: 60vh;
     overflow-x: scroll;
   }
 }
 
-#fullpage .main-content .stories .wrap {
+#fullpage .stories .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -886,7 +926,7 @@ header .header .header-right-box .ph-menu {
           box-sizing: border-box;
 }
 
-#fullpage .main-content .stories .wrap .title {
+#fullpage .stories .wrap .title {
   position: absolute;
   top: 1rem;
   left: 4rem;
@@ -894,7 +934,7 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories .wrap .title {
+  #fullpage .stories .wrap .title {
     top: 0.5rem;
     left: 1rem;
     font-size: calc(1.5rem + 0.9vw);
@@ -902,7 +942,7 @@ header .header .header-right-box .ph-menu {
   }
 }
 
-#fullpage .main-content .stories .wrap .link {
+#fullpage .stories .wrap .link {
   position: absolute;
   left: 2rem;
   bottom: 2rem;
@@ -912,12 +952,12 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories .wrap .link {
+  #fullpage .stories .wrap .link {
     display: none;
   }
 }
 
-#fullpage .main-content .stories .wrap .content {
+#fullpage .stories .wrap .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -935,13 +975,13 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories .wrap .content {
+  #fullpage .stories .wrap .content {
     margin-left: 1rem;
     padding-top: 2rem;
   }
 }
 
-#fullpage .main-content .stories .wrap .content .item {
+#fullpage .stories .wrap .content .item {
   width: calc(100% / 3);
   max-width: 550px;
   margin: 0 3rem 0 0;
@@ -950,7 +990,7 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories .wrap .content .item {
+  #fullpage .stories .wrap .content .item {
     width: auto;
     height: auto;
     max-width: none;
@@ -958,26 +998,26 @@ header .header .header-right-box .ph-menu {
   }
 }
 
-#fullpage .main-content .stories .wrap .content .item .pic {
+#fullpage .stories .wrap .content .item .pic {
   width: 100%;
   height: 100%;
   border-radius: 50% 50% 0 0;
   overflow: hidden;
 }
 
-#fullpage .main-content .stories .wrap .content .item .pic .pic-img {
+#fullpage .stories .wrap .content .item .pic .pic-img {
   width: 100%;
   height: 100%;
 }
 
-#fullpage .main-content .stories .wrap .content .item .text {
+#fullpage .stories .wrap .content .item .text {
   margin-top: 1rem;
   border-top: 1px solid black;
   font-size: 24px;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories .wrap .content .item .text {
+  #fullpage .stories .wrap .content .item .text {
     font-size: 1.2rem;
   }
 }
@@ -1671,14 +1711,40 @@ header .header .header-right-box .ph-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  height: 130px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  overflow: hidden;
 }
 
 #fullpage .main-content .product-describe .product-describe-container .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  width: 120px;
   padding: 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 1200px) {
+  #fullpage .main-content .product-describe .product-describe-container .arrow {
+    width: 80px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1688,35 +1754,45 @@ header .header .header-right-box .ph-menu {
 }
 
 #fullpage .main-content .product-describe .product-describe-container .left-arrow {
+  left: 0;
   border-right: 1px solid black;
 }
 
 #fullpage .main-content .product-describe .product-describe-container .right-arrow {
+  right: 0;
   border-left: 1px solid black;
 }
 
-#fullpage .main-content .product-describe .product-describe-container .text {
+#fullpage .main-content .product-describe .product-describe-container .carousel_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 400%;
+  height: 100%;
+  left: 0;
+}
+
+#fullpage .main-content .product-describe .product-describe-container .carousel_container .text {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-  padding: 1rem 2rem 0;
+  width: 100vw;
+  padding: 1rem 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .product-describe .product-describe-container .text {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text {
     position: static;
     display: block;
     padding: 0.5rem 1rem 2rem;
   }
 }
 
-#fullpage .main-content .product-describe .product-describe-container .text .title {
+#fullpage .main-content .product-describe .product-describe-container .carousel_container .text .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1725,18 +1801,18 @@ header .header .header-right-box .ph-menu {
           justify-content: center;
   width: 40%;
   font-size: 38px;
-  padding: 0 6rem;
+  padding: 0 4rem;
 }
 
 @media only screen and (max-width: 1200px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .title {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .title {
     text-align: center;
     font-size: calc(1.5rem + 0.6vw);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .title {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .title {
     width: 80%;
     font-size: calc(1.3rem + 0.3vw);
     line-height: 2;
@@ -1746,30 +1822,30 @@ header .header .header-right-box .ph-menu {
   }
 }
 
-#fullpage .main-content .product-describe .product-describe-container .text .content {
+#fullpage .main-content .product-describe .product-describe-container .carousel_container .text .content {
   width: 60%;
-  padding: 0 4rem 0 0;
+  padding: 0 4rem 0 2rem;
   font-size: 20px;
 }
 
 @media only screen and (max-width: 1200px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .content {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .content {
     padding: 0 2rem 0 0;
     font-size: 1rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .content {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .content {
     width: 100%;
     font-size: 0.625rem;
     padding: 0;
   }
 }
 
-#fullpage .main-content .product-describe .product-describe-container .text .btn {
+#fullpage .main-content .product-describe .product-describe-container .carousel_container .text .btn {
   position: absolute;
-  right: 1rem;
+  right: 145px;
   bottom: 1rem;
   padding: 0.375rem 1rem;
   background-color: transparent;
@@ -1779,32 +1855,32 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 1200px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .btn {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .btn {
     font-size: 0.875rem;
     padding: 0.2rem 0.5rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .product-describe .product-describe-container .text .btn {
+  #fullpage .main-content .product-describe .product-describe-container .carousel_container .text .btn {
     right: 0.5rem;
     bottom: 0.5rem;
     padding: 0.1rem 0.5rem;
   }
 }
 
-#fullpage .main-content .about {
+#fullpage .about {
   background-color: #fffbf6;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about {
+  #fullpage .about {
     width: 100%;
     height: 50vh;
   }
 }
 
-#fullpage .main-content .about .container {
+#fullpage .about .container {
   width: 100%;
   height: 100%;
   position: relative;
@@ -1817,12 +1893,12 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container {
+  #fullpage .about .container {
     display: block;
   }
 }
 
-#fullpage .main-content .about .container::before {
+#fullpage .about .container::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1833,30 +1909,30 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container::before {
+  #fullpage .about .container::before {
     bottom: 40px;
   }
 }
 
-#fullpage .main-content .about .container .pic {
+#fullpage .about .container .pic {
   width: 50%;
   height: 100%;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .pic {
+  #fullpage .about .container .pic {
     width: 100%;
     height: 50%;
   }
 }
 
-#fullpage .main-content .about .container .pic .pic-img {
+#fullpage .about .container .pic .pic-img {
   width: 100%;
   height: 100%;
   vertical-align: top;
 }
 
-#fullpage .main-content .about .container .text {
+#fullpage .about .container .text {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1875,7 +1951,7 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text {
+  #fullpage .about .container .text {
     width: 100%;
     height: 20%;
     position: static;
@@ -1886,42 +1962,42 @@ header .header .header-right-box .ph-menu {
   }
 }
 
-#fullpage .main-content .about .container .text .title {
+#fullpage .about .container .text .title {
   font-size: 54px;
   line-height: 2;
 }
 
 @media only screen and (max-width: 1200px) {
-  #fullpage .main-content .about .container .text .title {
+  #fullpage .about .container .text .title {
     font-size: calc(1.5rem + 1.2vw);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text .title {
+  #fullpage .about .container .text .title {
     font-size: calc(1.5rem + 0.9vw);
   }
 }
 
-#fullpage .main-content .about .container .text .content {
+#fullpage .about .container .text .content {
   font-size: 32px;
   line-height: 1.5;
 }
 
 @media only screen and (max-width: 1200px) {
-  #fullpage .main-content .about .container .text .content {
+  #fullpage .about .container .text .content {
     font-size: calc(1.2rem + 0.6vw);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text .content {
+  #fullpage .about .container .text .content {
     max-width: 200px;
     font-size: 1.2rem;
   }
 }
 
-#fullpage .main-content .about .container .text .link-group {
+#fullpage .about .container .text .link-group {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -1936,7 +2012,7 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text .link-group {
+  #fullpage .about .container .text .link-group {
     width: 50%;
     height: 40px;
     -webkit-box-align: center;
@@ -1949,7 +2025,7 @@ header .header .header-right-box .ph-menu {
   }
 }
 
-#fullpage .main-content .about .container .text .link-group .link-text {
+#fullpage .about .container .text .link-group .link-text {
   margin-right: 80px;
   padding: 1rem 2rem;
   font-size: 32px;
@@ -1957,46 +2033,46 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text .link-group .link-text {
+  #fullpage .about .container .text .link-group .link-text {
     margin-right: 1rem;
     padding: 0;
     font-size: 1.2rem;
   }
 }
 
-#fullpage .main-content .about .container .text .link-group .link-btn {
+#fullpage .about .container .text .link-group .link-btn {
   background-color: transparent;
   border: none;
   padding: 1rem 2rem;
 }
 
-#fullpage .main-content .about .container .text .link-group .link-btn img {
+#fullpage .about .container .text .link-group .link-btn img {
   width: 100%;
   height: auto;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .about .container .text .link-group .link-btn {
+  #fullpage .about .container .text .link-group .link-btn {
     width: 25px;
     height: auto;
     padding: 0;
   }
 }
 
-#fullpage .main-content .stories {
+#fullpage .stories {
   position: relative;
   background-color: #fffbf6;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories {
+  #fullpage .stories {
     width: 200%;
     height: 60vh;
     overflow-x: scroll;
   }
 }
 
-#fullpage .main-content .stories .wrap {
+#fullpage .stories .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2009,7 +2085,7 @@ header .header .header-right-box .ph-menu {
           box-sizing: border-box;
 }
 
-#fullpage .main-content .stories .wrap .title {
+#fullpage .stories .wrap .title {
   position: absolute;
   top: 1rem;
   left: 4rem;
@@ -2017,7 +2093,7 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories .wrap .title {
+  #fullpage .stories .wrap .title {
     top: 0.5rem;
     left: 1rem;
     font-size: calc(1.5rem + 0.9vw);
@@ -2025,7 +2101,7 @@ header .header .header-right-box .ph-menu {
   }
 }
 
-#fullpage .main-content .stories .wrap .link {
+#fullpage .stories .wrap .link {
   position: absolute;
   left: 2rem;
   bottom: 2rem;
@@ -2035,12 +2111,12 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories .wrap .link {
+  #fullpage .stories .wrap .link {
     display: none;
   }
 }
 
-#fullpage .main-content .stories .wrap .content {
+#fullpage .stories .wrap .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2058,13 +2134,13 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories .wrap .content {
+  #fullpage .stories .wrap .content {
     margin-left: 1rem;
     padding-top: 2rem;
   }
 }
 
-#fullpage .main-content .stories .wrap .content .item {
+#fullpage .stories .wrap .content .item {
   width: calc(100% / 3);
   max-width: 550px;
   margin: 0 3rem 0 0;
@@ -2073,7 +2149,7 @@ header .header .header-right-box .ph-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories .wrap .content .item {
+  #fullpage .stories .wrap .content .item {
     width: auto;
     height: auto;
     max-width: none;
@@ -2081,26 +2157,26 @@ header .header .header-right-box .ph-menu {
   }
 }
 
-#fullpage .main-content .stories .wrap .content .item .pic {
+#fullpage .stories .wrap .content .item .pic {
   width: 100%;
   height: 100%;
   border-radius: 50% 50% 0 0;
   overflow: hidden;
 }
 
-#fullpage .main-content .stories .wrap .content .item .pic .pic-img {
+#fullpage .stories .wrap .content .item .pic .pic-img {
   width: 100%;
   height: 100%;
 }
 
-#fullpage .main-content .stories .wrap .content .item .text {
+#fullpage .stories .wrap .content .item .text {
   margin-top: 1rem;
   border-top: 1px solid black;
   font-size: 24px;
 }
 
 @media only screen and (max-width: 768px) {
-  #fullpage .main-content .stories .wrap .content .item .text {
+  #fullpage .stories .wrap .content .item .text {
     font-size: 1.2rem;
   }
 }

@@ -5,37 +5,37 @@
                 no-repeat center/100% 100%;
             color: white;
 
-            @include breakpoint(pad){
-                @include size(100%,50vh);
+            @include breakpoint(pad) {
+                @include size(100%, 50vh);
             }
             .banner-text {
                 position: absolute;
                 top: 170px;
                 left: 100px;
 
-                @include breakpoint(pad){
-                    @include size(50%,100%);
+                @include breakpoint(pad) {
+                    @include size(50%, 100%);
                     top: 0;
-                    left: 30px;            
+                    left: 30px;
                 }
                 .text-title {
                     font-size: calc(1.375rem + 1.5vw);
 
-                    @include breakpoint(pad){
+                    @include breakpoint(pad) {
                         position: absolute;
                         top: 130px;
                         width: 100px;
-                        font-size: 1.5rem;       
-                    } 
+                        font-size: 1.5rem;
+                    }
                 }
                 .text-content {
                     font-size: calc(1.275rem + 0.3vw);
 
-                    @include breakpoint(pad){
+                    @include breakpoint(pad) {
                         position: absolute;
                         bottom: 30px;
-                        font-size: 1rem;      
-                    } 
+                        font-size: 1rem;
+                    }
                 }
             }
             .banner-link {
@@ -43,10 +43,10 @@
                 right: 80px;
                 bottom: 80px;
 
-                @include breakpoint(pad){
+                @include breakpoint(pad) {
                     right: 20px;
-                    bottom: 30px;   
-                } 
+                    bottom: 30px;
+                }
                 .link {
                     padding: 12px 28px;
                     background-color: transparent;
@@ -54,312 +54,331 @@
                     font-size: calc(1.275rem + 0.3vw);
                     color: white;
                     cursor: pointer;
-                    @include breakpoint(pad){
+                    @include breakpoint(pad) {
                         padding: 0.275rem 0.4rem;
                         font-size: 0.875rem;
-                    } 
+                    }
                 }
             }
         }
         .product-describe {
             position: relative;
             background: url("../img/index/page-2-background.png") scroll
-                no-repeat 50% 25%/contain;
+                no-repeat 50% 25% / contain;
             background-color: #f4ede4;
 
-            @include breakpoint(pad){
-                @include size(100%,40vh);
+            @include breakpoint(pad) {
+                @include size(100%, 40vh);
             }
             .product-describe-container {
                 position: absolute;
                 left: 0;
                 bottom: 0;
                 display: flex;
+                align-items: center;
                 width: 100%;
+                height: 130px;
                 border-top: 1px solid black;
                 border-bottom: 1px solid black;
+                overflow: hidden;
                 .arrow {
+                    @include flex_center;
+                    position: absolute;
+                    top: 0;
+                    width: 120px;
                     padding: 3rem;
+                    box-sizing: border-box;
                     cursor: pointer;
+                    z-index: 100;
 
-                    @include breakpoint(pad){
+                    @include breakpoint(pc){
+                        width: 80px;
+                    }
+                    @include breakpoint(pad) {
                         display: none;
                     }
                 }
                 .left-arrow {
+                    left: 0;
                     border-right: 1px solid black;
                 }
                 .right-arrow {
+                    right: 0;
                     border-left: 1px solid black;
                 }
-                .text {
-                    position: relative;
+                .carousel_container {
                     display: flex;
-                    justify-content: space-around;
-                    width: 100%;
-                    padding: 1rem 2rem 0;
-                    box-sizing: border-box;
+                    position: absolute;
+                    @include size(400%,100%);
 
-                    @include breakpoint(pad){
-                        position: static;
-                        display: block;
-                        padding: 0.5rem 1rem 2rem ;
-                    }
-                    .title {
+                    left: 0;
+                    .text {
+                        position: relative;
                         display: flex;
-                        justify-content: center;
-                        width: 40%;
-                        font-size: 38px;
-                        padding: 0 6rem;
-
-                        @include breakpoint(pc){
-                            text-align: center;
-                            font-size: calc(1.5rem + 0.6vw);
+                        width: 100vw;
+                        padding: 1rem 120px;
+                        box-sizing: border-box;
+                        @include breakpoint(pad) {
+                            position: static;
+                            display: block;
+                            padding: 0.5rem 1rem 2rem;
                         }
-                        @include breakpoint(pad){
-                            width: 80%;
-                            font-size: calc(1.3rem + 0.3vw);
-                            line-height: 2;
-                            justify-content: flex-start;
-                        }
-                    }
-                    .content {
-                        width: 60%;
-                        padding: 0 4rem 0 0;
-                        font-size: 20px;
+                        .title {
+                            display: flex;
+                            justify-content: center;
+                            width: 40%;
+                            font-size: 38px;
+                            padding: 0 4rem;
 
-                        @include breakpoint(pc){
-                            padding: 0 2rem 0 0;
+                            @include breakpoint(pc) {
+                                text-align: center;
+                                font-size: calc(1.5rem + 0.6vw);
+                            }
+                            @include breakpoint(pad) {
+                                width: 80%;
+                                font-size: calc(1.3rem + 0.3vw);
+                                line-height: 2;
+                                justify-content: flex-start;
+                            }
+                        }
+                        .content {
+                            width: 60%;
+                            padding: 0 4rem 0 2rem;
+                            font-size: 20px;
+
+                            @include breakpoint(pc) {
+                                padding: 0 2rem 0 0;
+                                font-size: 1rem;
+                            }
+                            @include breakpoint(pad) {
+                                width: 100%;
+                                font-size: 0.625rem;
+                                padding: 0;
+                            }
+                        }
+                        .btn {
+                            position: absolute;
+                            right: 145px;
+                            bottom: 1rem;
+                            padding: 0.375rem 1rem;
+                            background-color: transparent;
+                            border: 1px solid black;
+                            cursor: pointer;
                             font-size: 1rem;
-                        }
-                        @include breakpoint(pad){
-                            width: 100%;
-                            font-size: 0.625rem;
-                            padding: 0;
-                        }
-                    }
-                    .btn {
-                        position: absolute;
-                        right: 1rem;
-                        bottom: 1rem;
-                        padding: 0.375rem 1rem;
-                        background-color: transparent;
-                        border: 1px solid black;
-                        cursor: pointer;
-                        font-size: 1rem;
 
-                        @include breakpoint(pc){
-                            font-size: 0.875rem;
-                            padding: 0.2rem 0.5rem;
-                        }
-                        @include breakpoint(pad){
-                            right: 0.5rem;
-                            bottom: 0.5rem;
-                            padding: 0.1rem 0.5rem;
+                            @include breakpoint(pc) {
+                                font-size: 0.875rem;
+                                padding: 0.2rem 0.5rem;
+                            }
+                            @include breakpoint(pad) {
+                                right: 0.5rem;
+                                bottom: 0.5rem;
+                                padding: 0.1rem 0.5rem;
+                            }
                         }
                     }
                 }
             }
         }
-        .about {
-            background-color: #fffbf6;
+    }
+    .about {
+        background-color: #fffbf6;
 
-            @include breakpoint(pad){
-                @include size(100%,50vh);
+        @include breakpoint(pad) {
+            @include size(100%, 50vh);
+        }
+        .container {
+            @include size(100%);
+            position: relative;
+            display: flex;
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+
+            @include breakpoint(pad) {
+                display: block;
             }
-            .container {
-                @include size(100%);
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 72px;
+                width: 100%;
+                height: 1px;
+                background-color: black;
+
+                @include breakpoint(pad) {
+                    bottom: 40px;
+                }
+            }
+            .pic {
+                @include size(50%, 100%);
+
+                @include breakpoint(pad) {
+                    @include size(100%, 50%);
+                }
+                .pic-img {
+                    @include size(100%);
+                    vertical-align: top;
+                }
+            }
+            .text {
                 position: relative;
                 display: flex;
-                border-bottom: 1px solid black;
-                box-sizing: border-box;
-
-                @include breakpoint(pad){
-                    display: block;
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 72px;
-                    width: 100%;
-                    height: 1px;
-                    background-color: black;
-
-                    @include breakpoint(pad){
-                        bottom: 40px;
-                    }
-                }
-                .pic {
-                    @include size(50%,100%);
-
-                    @include breakpoint(pad){
-                        @include size(100%,50%);
-                    }
-                    .pic-img {
-                        @include size(100%);
-                        vertical-align: top;
-                    }
-                }
-                .text {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                    width: 50%;
-                    padding-top: 5rem;
-                    box-sizing: border-box;
-                    @include breakpoint(pad){
-                        @include size(100%,20%);
-                        position: static;
-                        padding: 0.875rem;
-                        align-items: flex-start;
-                    }
-                    .title {
-                        font-size: 54px;
-                        line-height: 2;
-
-                        @include breakpoint(pc){
-                            font-size: calc(1.5rem + 1.2vw);
-                        }
-                        @include breakpoint(pad){
-                            font-size: calc(1.5rem + 0.9vw);
-                        }
-                    }
-                    .content {
-                        font-size: 32px;
-                        line-height: 1.5;
-
-                        @include breakpoint(pc){
-                            font-size: calc(1.2rem + 0.6vw);
-                        }
-                        @include breakpoint(pad){
-                            max-width: 200px;
-                            font-size: 1.2rem;
-                        }
-                    }
-                    .link-group {
-                        position: absolute;
-                        right: 0;
-                        bottom: 0;
-                        display: flex;
-                        justify-content: space-around;
-                        width: 100%;
-                        box-sizing: border-box;
-
-                        @include breakpoint(pad){
-                            width: 50%;
-                            height: 40px;
-                            align-items: center;
-                            justify-content: center;
-                            bottom: 0;
-                        }
-                        .link-text {
-                            margin-right: 80px;
-                            padding: 1rem 2rem;
-                            font-size: 32px;
-                            color: black;
-
-                            @include breakpoint(pad){
-                                margin-right: 1rem;
-                                padding: 0;
-                                font-size: 1.2rem;
-                            }
-                        }
-                        .link-btn {
-                            background-color: transparent;
-                            border: none;
-                            padding: 1rem 2rem;
-                            img{
-                                @include size(100%,auto);
-                            }
-                            @include breakpoint(pad){
-                                @include size(25px,auto);
-                                padding: 0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .stories {
-            position: relative;
-            background-color: #fffbf6;
-
-            @include breakpoint(pad){
-                @include size(200%,60vh);
-                overflow-x: scroll;
-            }
-            .wrap {
-                display: flex;
                 align-items: center;
-                @include size(100%);
+                flex-direction: column;
+                width: 50%;
+                padding-top: 5rem;
                 box-sizing: border-box;
-
-                .title {
-                    position: absolute;
-                    top: 1rem;
-                    left: 4rem;
-                    font-size: calc(1.5rem + 1.2vw);
-
-                    @include breakpoint(pad){
-                        top: 0.5rem;
-                        left: 1rem;
-                        font-size: calc(1.5rem + 0.9vw);
-                        font-weight: 400;
-                    }
+                @include breakpoint(pad) {
+                    @include size(100%, 20%);
+                    position: static;
+                    padding: 0.875rem;
+                    align-items: flex-start;
                 }
-                .link {
-                    position: absolute;
-                    left: 2rem;
-                    bottom: 2rem;
-                    padding: 0.375rem 1rem;
-                    border: 1px solid black;
-                    font-size: calc(1.2rem + 0.3vw);
+                .title {
+                    font-size: 54px;
+                    line-height: 2;
 
-                    @include breakpoint(pad){
-                        display: none;
+                    @include breakpoint(pc) {
+                        font-size: calc(1.5rem + 1.2vw);
+                    }
+                    @include breakpoint(pad) {
+                        font-size: calc(1.5rem + 0.9vw);
                     }
                 }
                 .content {
+                    font-size: 32px;
+                    line-height: 1.5;
+
+                    @include breakpoint(pc) {
+                        font-size: calc(1.2rem + 0.6vw);
+                    }
+                    @include breakpoint(pad) {
+                        max-width: 200px;
+                        font-size: 1.2rem;
+                    }
+                }
+                .link-group {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
                     display: flex;
-                    align-items: center;
-                    justify-content: end;
-                    @include size(100%);
-                    margin-left: 200px;
+                    justify-content: space-around;
+                    width: 100%;
                     box-sizing: border-box;
 
-                    @include breakpoint(pad){
-                        margin-left: 1rem;
-                        padding-top: 2rem;
+                    @include breakpoint(pad) {
+                        width: 50%;
+                        height: 40px;
+                        align-items: center;
+                        justify-content: center;
+                        bottom: 0;
                     }
-                    .item {
-                        width: calc(100% / 3);
-                        max-width: 550px;
-                        margin: 0 3rem 0 0;
-                        box-sizing: border-box;
+                    .link-text {
+                        margin-right: 80px;
+                        padding: 1rem 2rem;
+                        font-size: 32px;
+                        color: black;
 
-                        @include breakpoint(pad){
-                            @include size(auto);
-                            max-width: none;
+                        @include breakpoint(pad) {
                             margin-right: 1rem;
+                            padding: 0;
+                            font-size: 1.2rem;
                         }
-                        .pic {
-                            @include size(100%, 100%);
-                            border-radius: 50% 50% 0 0;
-                            overflow: hidden;
-                            .pic-img {
-                                @include size(100%, 100%);
-                            }
+                    }
+                    .link-btn {
+                        background-color: transparent;
+                        border: none;
+                        padding: 1rem 2rem;
+                        img {
+                            @include size(100%, auto);
                         }
-                        .text {
-                            margin-top: 1rem;
-                            border-top: 1px solid black;
-                            font-size: 24px;
+                        @include breakpoint(pad) {
+                            @include size(25px, auto);
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .stories {
+        position: relative;
+        background-color: #fffbf6;
 
-                            @include breakpoint(pad){
-                                font-size: 1.2rem;
-                            }
+        @include breakpoint(pad) {
+            @include size(200%, 60vh);
+            overflow-x: scroll;
+        }
+        .wrap {
+            display: flex;
+            align-items: center;
+            @include size(100%);
+            box-sizing: border-box;
+
+            .title {
+                position: absolute;
+                top: 1rem;
+                left: 4rem;
+                font-size: calc(1.5rem + 1.2vw);
+
+                @include breakpoint(pad) {
+                    top: 0.5rem;
+                    left: 1rem;
+                    font-size: calc(1.5rem + 0.9vw);
+                    font-weight: 400;
+                }
+            }
+            .link {
+                position: absolute;
+                left: 2rem;
+                bottom: 2rem;
+                padding: 0.375rem 1rem;
+                border: 1px solid black;
+                font-size: calc(1.2rem + 0.3vw);
+
+                @include breakpoint(pad) {
+                    display: none;
+                }
+            }
+            .content {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                @include size(100%);
+                margin-left: 200px;
+                box-sizing: border-box;
+
+                @include breakpoint(pad) {
+                    margin-left: 1rem;
+                    padding-top: 2rem;
+                }
+                .item {
+                    width: calc(100% / 3);
+                    max-width: 550px;
+                    margin: 0 3rem 0 0;
+                    box-sizing: border-box;
+
+                    @include breakpoint(pad) {
+                        @include size(auto);
+                        max-width: none;
+                        margin-right: 1rem;
+                    }
+                    .pic {
+                        @include size(100%, 100%);
+                        border-radius: 50% 50% 0 0;
+                        overflow: hidden;
+                        .pic-img {
+                            @include size(100%, 100%);
+                        }
+                    }
+                    .text {
+                        margin-top: 1rem;
+                        border-top: 1px solid black;
+                        font-size: 24px;
+
+                        @include breakpoint(pad) {
+                            font-size: 1.2rem;
                         }
                     }
                 }

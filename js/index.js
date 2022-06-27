@@ -21,5 +21,28 @@ $(".footer-toTop").on("click",function(){
 
 //ph-menu
 $(".ph-menu").on("click",function(){
-    $(".navbar").toggleClass("ph-navbar-show")
+    $(".navbar").toggleClass("ph-navbar-show");
+    $(this).toggleClass("active")
+})
+
+//carousel
+
+let index = 0;
+$(".left-arrow").on("click",function(){
+    index --
+    if(index<0){
+        index = 2
+    }
+    let windowWidth = window.innerWidth;
+    let move = -index*windowWidth;
+    $(".carousel_container").animate({left:move});
+})
+$(".right-arrow").on("click",function(){
+    index ++
+    if(index>2){
+        index = 0
+    }
+    let windowWidth = window.innerWidth;
+    let move = -index*windowWidth;
+    $(".carousel_container").animate({left:move});
 })

@@ -119,7 +119,7 @@ header {
             .ph-menu{
                 display: none;
                 background: url("../img/header/ph-menu.png") no-repeat scroll center/100% 100%;
-
+    
                 @include breakpoint(lap){
                     position: absolute;
                     display: block;
@@ -135,6 +135,9 @@ header {
                     width: 25px;
                     height: 20px;
                     z-index: 999;
+                }
+                &.active{
+                    background: url("../img/header/cancel.png") no-repeat scroll center/100% 100%;
                 }
             }
         }
