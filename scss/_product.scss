@@ -291,8 +291,9 @@
                                 top: -2.5rem;
                                 @include flex_center;
                                 @include circle(80px, transparent);
+                                line-height: normal;
                                 padding: 0.5rem;
-                                font-size: 1.2rem;
+                                font-size: 1rem;
                                 font-weight: 500;
                                 border: 1.5px solid black;
                                 cursor: pointer;

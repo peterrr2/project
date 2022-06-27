@@ -1507,8 +1507,9 @@ header .header .header-right-box .ph-menu.active {
   border-radius: 50%;
   background-color: transparent;
   text-align: center;
+  line-height: normal;
   padding: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   border: 1.5px solid black;
   cursor: pointer;
